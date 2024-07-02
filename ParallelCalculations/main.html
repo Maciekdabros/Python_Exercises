@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>main</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmacie%5Cdesktop%5Cmagisterka%5Csemestr2%5Czaawansowane_techniki%5Cparallelcalculations%5Cmain.py">c:\users\macie\desktop\magisterka\semestr2\zaawansowane_techniki\parallelcalculations\main.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-mass_spring_dynamics"><strong>mass_spring_dynamics</strong></a>(t, state, m, c, k, A, f)</dt><dd><tt>Oblicza&nbsp;pochodne&nbsp;dla&nbsp;układu&nbsp;masy&nbsp;na&nbsp;sprężynie&nbsp;z&nbsp;zewnętrznym&nbsp;wymuszeniem.<br>
+&nbsp;<br>
+Parameters:<br>
+t&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Aktualny&nbsp;czas&nbsp;w&nbsp;symulacji.<br>
+state&nbsp;:&nbsp;list&nbsp;or&nbsp;ndarray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Aktualny&nbsp;stan&nbsp;układu,&nbsp;gdzie&nbsp;state[0]&nbsp;to&nbsp;przemieszczenie&nbsp;(x)&nbsp;i&nbsp;state[1]&nbsp;to&nbsp;prędkość&nbsp;(v).<br>
+m&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Masa&nbsp;obiektu.<br>
+c&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Współczynnik&nbsp;tłumienia.<br>
+k&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Współczynnik&nbsp;sztywności&nbsp;sprężyny.<br>
+A&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Amplituda&nbsp;siły&nbsp;zewnętrznej.<br>
+f&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Częstotliwość&nbsp;siły&nbsp;zewnętrznej.<br>
+Returns:<br>
+list:&nbsp;Pochodne&nbsp;dxdt&nbsp;(prędkość)&nbsp;i&nbsp;dvdt&nbsp;(przyspieszenie).</tt></dd></dl>
+ <dl><dt><a name="-multiprocessing_simulation"><strong>multiprocessing_simulation</strong></a>()</dt><dd><tt>Uruchamia&nbsp;symulacje&nbsp;wieloprocesowe&nbsp;dla&nbsp;wszystkich&nbsp;par&nbsp;masy&nbsp;i&nbsp;częstotliwości.<br>
+&nbsp;<br>
+Returns:<br>
+ndarray:&nbsp;Macierz&nbsp;maksymalnych&nbsp;przemieszczeń&nbsp;dla&nbsp;każdej&nbsp;pary&nbsp;parametrów.</tt></dd></dl>
+ <dl><dt><a name="-multithreading_simulation"><strong>multithreading_simulation</strong></a>()</dt><dd><tt>Uruchamia&nbsp;symulacje&nbsp;wielowątkowe&nbsp;dla&nbsp;wszystkich&nbsp;par&nbsp;masy&nbsp;i&nbsp;częstotliwości.<br>
+&nbsp;<br>
+Returns:<br>
+ndarray:&nbsp;Macierz&nbsp;maksymalnych&nbsp;przemieszczeń&nbsp;dla&nbsp;każdej&nbsp;pary&nbsp;parametrów.</tt></dd></dl>
+ <dl><dt><a name="-run_simulation"><strong>run_simulation</strong></a>(m_f_pair)</dt><dd><tt>Uruchamia&nbsp;symulację&nbsp;dla&nbsp;danego&nbsp;zestawu&nbsp;parametrów&nbsp;masy&nbsp;i&nbsp;częstotliwości.<br>
+&nbsp;<br>
+Parameters:<br>
+m_f_pair&nbsp;:&nbsp;tuple<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Para&nbsp;wartości&nbsp;(m,&nbsp;f),&nbsp;gdzie&nbsp;m&nbsp;to&nbsp;masa,&nbsp;a&nbsp;f&nbsp;to&nbsp;częstotliwość.<br>
+&nbsp;<br>
+Returns:<br>
+float:&nbsp;Maksymalne&nbsp;przemieszczenie&nbsp;dla&nbsp;danej&nbsp;pary&nbsp;parametrów.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>A</strong> = 1<br>
+<strong>F</strong> = array([[ 1.        ,  1.        ,  1.        , .... 10.        ,
+        10.        , 10.        ]])<br>
+<strong>M</strong> = array([[ 1.        ,  1.23076923,  1.46153846, ....  9.53846154,
+         9.76923077, 10.        ]])<br>
+<strong>c</strong> = 0.001<br>
+<strong>frequency_values</strong> = array([ 1.        ,  1.23076923,  1.46153846,  1...30769231,  9.53846154,  9.76923077, 10.        ])<br>
+<strong>initial_conditions</strong> = [0, 0]<br>
+<strong>k</strong> = 1000<br>
+<strong>mass_values</strong> = array([ 1.        ,  1.23076923,  1.46153846,  1...30769231,  9.53846154,  9.76923077, 10.        ])<br>
+<strong>simulation_time</strong> = 10<br>
+<strong>t_eval</strong> = array([0.  , 0.01, 0.02, 0.03, 0.04, 0.05, 0.06,... 9.92, 9.93, 9.94, 9.95, 9.96, 9.97, 9.98, 9.99])<br>
+<strong>time_step</strong> = 0.01</td></tr></table>
+</body></html>
